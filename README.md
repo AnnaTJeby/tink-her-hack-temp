@@ -2,39 +2,43 @@
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# [Project Name] 🎯
+# Cognovoid 🎯
 
 ## Basic Details
 
-### Team Name: [Name]
+### Team Name: DaisyCrux
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
+- Member 1: Anna T Jeby - Muthoot Institute of Technology and Science,Varikoli
+- Member 2:  Athira V - Muthoot Institute of Technology and Science,Varikoli
 
 ### Hosted Project Link
 [mention your project hosted link here]
 
 ### Project Description
-[2-3 lines about what your project does]
-
+Cognovoid predicts a continuous stress score (0–10) from daily behavior inputs, calculates a cognitive risk score, and visualizes mental stability using interactive charts. The platform includes a friendly chatbot that guides users through the quiz and provides personalized recommendations to reduce stress and improve decision-making.
 ### The Problem statement
-[What problem are you solving?]
+People often make poor decisions when mentally exhausted, overstressed, or emotionally reactive. Existing mental trackers display data but rarely provide real-time predictive insights or actionable guidance.### The Solution
+We developed an interactive platform that:
 
-### The Solution
-[How are you solving it?]
+Uses a chatbot to gently guide users through a behavioral quiz.
 
----
+Predicts stress and cognitive risk using a trained XGBoost regression model.
+
+Provides intuitive visualizations: doughnut charts for risk bands, radar charts for feature contributions, and energy curves for mental stability.
+
+Offers personalized guidance to help users manage stress and avoid decision fatigue.
+
 
 ## Technical Details
 
 ### Technologies/Components Used
 
 **For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
-- Frameworks used: [e.g., React, Django, Spring Boot]
-- Libraries used: [e.g., axios, pandas, JUnit]
-- Tools used: [e.g., VS Code, Git, Docker]
+- Languages used: JavaScript, Python, HTML, CSS
+- Frameworks used: Flask (backend), Vanilla JS + HTML/CSS (frontend)
+- Libraries used: XGBoost, pandas, numpy, matplotlib, Chart.js
+- Tools used: VS Code, Jupyter Notebook, Git, Live Server
 
 **For Hardware:**
 - Main components: [List main components]
@@ -46,16 +50,30 @@
 ## Features
 
 List the key features of your project:
-- Feature 1: [Description]
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
+- Feature 1: Chatbot guidance: Friendly user interface that interacts before and during the quiz
+- Feature 2: Gamified quiz input: Collects behavioral metrics via sliders and selects
+- Feature 3: Stress prediction: XGBoost regression model outputs stress score and risk band
+- Feature 4: Visual dashboards: Doughnut, radar, and energy curve visualizations
+- Feature 5: Personalized guidance: Suggestions to reduce stress and improve cognitive stability
+- Feature 6: History tracking: Saves previous quiz results for pattern analysis
 
 ---
 
 ## Implementation
-
 ### For Software:
+Installation
+  cd backend
+    pip install -r requirements.txt
+Train Model
+  cd backend
+    python train_model.py
+Run Backend
+  cd backend
+    python app.py
+Open Frontend Pages (via live server/static server)
+  frontend/index.html
+  frontend/quiz.html
+  frontend/result.html
 
 #### Installation
 ```bash
@@ -83,26 +101,39 @@ List the key features of your project:
 
 #### Screenshots (Add at least 3)
 
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot1] <img width="1854" height="927" alt="Landing" src="https://github.com/user-attachments/assets/d9d057f3-d15a-49bf-aec2-fb894e89f3ad" />
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+Landing page of Cognovoid showing the friendly chatbot interface that welcomes users and guides them to start the stress assessment quiz.
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot2] <img width="1350" height="911" alt="chatbot" src="https://github.com/user-attachments/assets/c1627d3a-03c4-422e-b7b5-02ba82346883" />
+
+This screenshot shows the interactive chatbot in action, collecting the user’s initial mental state and guiding them through the behavioral quiz for stress and cognitive risk assessment.
+![Screenshot3] <img width="1778" height="864" alt="chart" src="https://github.com/user-attachments/assets/8bb5ef7e-5a2f-4700-a0c2-d67bb2bff91e" />
+![Screenshot4]<img width="1721" height="759" alt="curve" src="https://github.com/user-attachments/assets/07625145-29a9-4148-b823-aea53fe6f896" />
+
+This screenshot shows the Energy Curve and Generalized Interpretation section of Cognovoid’s results page
 
 #### Diagrams
 
 **System Architecture:**
 
-![Architecture Diagram](docs/architecture.png)
-*Explain your system architecture - components, data flow, tech stack interaction*
+![Architecture Diagram](docs/architecture.png)<img width="1536" height="1024" alt="SA Diagram" src="https://github.com/user-attachments/assets/e4be159a-6be4-4a46-9fab-9955d644acc3" />
 
+Frontend
+Mobile & Web App – Where users interact with the system, fill forms, view results, and get notifications.
+Backend
+API & Server – Processes requests, applies business logic, and communicates with the database and ML model.
+Database – Stores users, stress scores, and app data (SQL/NoSQL).
+External Services
+ML Model – Predicts stress scores from user input.
+Payment Gateway – Handles secure transactions (if any).
+Flow
+
+User → Frontend → Backend → ML Model & Database → Backend → Frontend
 **Application Workflow:**
 
 ![Workflow](docs/workflow.png)
-*Add caption explaining your workflow*
+User → Frontend → Backend → ML Model & Database → Backend → Frontend
 
 ---
 
@@ -374,19 +405,15 @@ python script.py -v --format json data.json
 
 If you used AI tools during development, document them here for transparency:
 
-**Tool Used:** [e.g., GitHub Copilot, v0.dev, Cursor, ChatGPT, Claude]
+**Tool Used:**  GitHub Copilot,ChatGPT
 
-**Purpose:** [What you used it for]
-- Example: "Generated boilerplate React components"
-- Example: "Debugging assistance for async functions"
-- Example: "Code review and optimization suggestions"
+**Purpose:**
+- Code suggestions, algorithm explanations, frontend-backend integration guidance
 
 **Key Prompts Used:**
-- "Create a REST API endpoint for user authentication"
 - "Debug this async function that's causing race conditions"
-- "Optimize this database query for better performance"
 
-**Percentage of AI-generated code:** [Approximately X%]
+**Percentage of AI-generated code:** [Approximately 15%]
 
 **Human Contributions:**
 - Architecture design and planning
@@ -400,10 +427,8 @@ If you used AI tools during development, document them here for transparency:
 
 ## Team Contributions
 
-- [Name 1]: [Specific contributions - e.g., Frontend development, API integration, etc.]
-- [Name 2]: [Specific contributions - e.g., Backend development, Database design, etc.]
-- [Name 3]: [Specific contributions - e.g., UI/UX design, Testing, Documentation, etc.]
-
+- Anna T Jeby: Frontend development,chatbot integration, result visualization
+-  Athira V]: Backend development, XGBoost model training, API creation, system architecture
 ---
 
 ## License
